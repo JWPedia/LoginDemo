@@ -1,0 +1,24 @@
+.AuthWrapper {
+    font-size: 1.2em;
+    margin: auto;
+    width: 100px;
+    background-color: rgba(73, 63, 252, 1);
+}
+
+.AuthList {
+    list-style-type: none;
+}
+
+.AuthListItem {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.AuthListItem button {
+    background-color: rgba(73, 63, 252, 1);
+    border: none;
+}
+
+.AuthListItem button:hover {
+    background-color: #6d76f7;
+}

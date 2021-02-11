@@ -1,23 +1,22 @@
-import React from 'react';
+import { Component } from 'react';
 import './App.css';
-import { AmplifyAuthenticator, AmplifySignOut, AmplifySignIn, AmplifySignUp } from '@aws-amplify/ui-react';
-import config from './aws-exports';
+import MyAuth from './Components/Authentication/MyAuth';
+import Navbar from "./Components/Navbar/Navbar";
+import SampleWebApp from "./Components/SampleWebApp/SampleWebApp";
 
-function App(props) {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <AmplifyAuthenticator>
-          <AmplifySignIn headerText="Sign In" slot="sign-in"/>
-          <AmplifySignUp headerText="Sign Up" slot="sign-up"/>
-          <div>
-            My App
-            <AmplifySignOut />
-          </div>
-        </AmplifyAuthenticator>
+class App extends Component {
+  render() {
+    return (
+      <div className = "App">
+      <header className = "App-header">
+        <Navbar changer={this.toggleLoginOpenState}/>
       </header>
-    </div>
-  );
+        <div>
+          <MyAuth/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
